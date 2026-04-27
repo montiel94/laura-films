@@ -1,0 +1,46 @@
+<section class="testimonios-section" id="testimonios">
+  <div class="section-eyebrow">Lo que dicen</div>
+  <h2 class="section-title">CLIENTES QUE<br><span class="accent">CONFÍAN</span></h2>
+
+  <div class="test-grid">
+    @for (t of testimonials; track t.name) {
+      <div class="test-card">
+        <div class="test-stars">
+          <span class="test-star">★</span>
+          <span class="test-star">★</span>
+          <span class="test-star">★</span>
+          <span class="test-star">★</span>
+          <span class="test-star">★</span>
+        </div>
+        <p class="test-quote">{{ t.quote }}</p>
+        <div class="test-divider"></div>
+        <div class="test-author">
+          <div class="test-avatar">{{ t.initials }}</div>
+          <div>
+            <div class="test-name">{{ t.name }}</div>
+            <div class="test-role">{{ t.role }}</div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Featured testimonial -->
+  <div class="test-featured">
+    <div class="test-feat-num" aria-hidden="true">❝</div>
+    <div>
+      <div class="test-feat-quote">
+        Trabajar con Laura es tener una
+        <span>aliada estratégica</span>,
+        no solo una proveedora de contenido.
+      </div>
+      <div class="test-feat-author">
+        <div class="test-feat-avatar">FL</div>
+        <div>
+          <div class="test-feat-name">Fusion Luxury</div>
+          <div class="test-feat-role">Marca de fragancias · Santiago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

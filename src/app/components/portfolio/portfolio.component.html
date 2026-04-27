@@ -1,0 +1,21 @@
+<section class="portfolio-section" id="portafolio">
+  <div class="section-eyebrow">Portafolio</div>
+  <h2 class="section-title">TRABAJO<br><span class="accent">REAL.</span></h2>
+
+  <div class="port-grid">
+    @for (item of items; track item.label) {
+      <div
+        class="port-item"
+        [class.tall]="item.tall"
+        [style.background]="item.bg"
+      >
+        <div class="port-visual" aria-hidden="true">{{ item.icon }}</div>
+        <div class="port-overlay">
+          <div class="port-overlay-text">{{ item.overlayTitle }}</div>
+          <div class="port-overlay-sub">{{ item.overlaySub }}</div>
+        </div>
+        <div class="port-label">{{ item.label }}</div>
+      </div>
+    }
+  </div>
+</section>

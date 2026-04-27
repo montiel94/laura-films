@@ -1,0 +1,24 @@
+<nav>
+  <a class="nav-logo" href="#">Laura<span>Films</span></a>
+
+  <ul class="nav-links" [class.open]="menuOpen()">
+    <li><a href="#planes" (click)="closeMenu()">Planes</a></li>
+    <li><a href="#portafolio" (click)="closeMenu()">Portafolio</a></li>
+    <li><a href="#contacto" (click)="closeMenu()">Contacto</a></li>
+  </ul>
+
+  <a class="nav-cta" href="https://www.instagram.com/laurafilms__" target="_blank" rel="noopener">
+    &#64;laurafilms__
+  </a>
+
+  <button
+    class="nav-toggle"
+    [class.open]="menuOpen()"
+    [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+    (click)="toggleMenu()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>

@@ -1,0 +1,73 @@
+<section class="plans-section" id="planes">
+  <div class="plans-header">
+    <div>
+      <div class="section-eyebrow">Planes y precios</div>
+      <h2 class="section-title">ELIGE TU<br><span class="accent">PLAN</span></h2>
+    </div>
+    <p class="plans-sub">
+      Todos los planes incluyen 3 horas de grabación mensual.
+      Valores líquidos, con boleta de honorarios.
+    </p>
+  </div>
+
+  <!-- Cards grid -->
+  <div class="plans-grid">
+    @for (plan of plans; track plan.name) {
+      <div class="plan-card" [class.featured]="plan.featured">
+        <div class="plan-tag">{{ plan.tag }}</div>
+        <div class="plan-name">{{ plan.name }}</div>
+        <div class="plan-tagline">{{ plan.tagline }}</div>
+        <div class="plan-price">{{ plan.price }}</div>
+        <div class="plan-period">{{ plan.period }}</div>
+        <ul class="plan-features">
+          @for (feature of plan.features; track feature) {
+            <li class="plan-feature">{{ feature }}</li>
+          }
+        </ul>
+        <a class="plan-cta" [href]="igUrl" target="_blank" rel="noopener">
+          Contratar plan
+        </a>
+      </div>
+    }
+  </div>
+
+  <!-- Plan Marketing (full-width) -->
+  <div class="plan-full">
+    <div>
+      <div class="plan-full-tag">Plan completo</div>
+      <div class="plan-full-name">PLAN MARKETING</div>
+      <div class="plan-full-sub">La solución 360° — todo incluido en un plan</div>
+    </div>
+
+    <div class="plan-full-feats">
+      <div class="plan-full-feat">
+        <span class="plan-full-feat-label">Grilla</span>
+        <span class="plan-full-feat-val">Contenido</span>
+      </div>
+      <div class="plan-full-feat">
+        <span class="plan-full-feat-label">Redes</span>
+        <span class="plan-full-feat-val">Sociales</span>
+      </div>
+      <div class="plan-full-feat">
+        <span class="plan-full-feat-label">Posts</span>
+        <span class="plan-full-feat-val acc">8</span>
+      </div>
+      <div class="plan-full-feat">
+        <span class="plan-full-feat-label">Historias</span>
+        <span class="plan-full-feat-val">Diarias</span>
+      </div>
+      <div class="plan-full-feat">
+        <span class="plan-full-feat-label">Incluye</span>
+        <span class="plan-full-feat-val">Publicidad</span>
+      </div>
+    </div>
+
+    <div class="plan-full-right">
+      <div>
+        <div class="plan-full-price">$990.000</div>
+        <div class="plan-full-period">/ mes · líquido</div>
+      </div>
+      <a class="btn-y" [href]="igUrl" target="_blank" rel="noopener">Contratar</a>
+    </div>
+  </div>
+</section>
