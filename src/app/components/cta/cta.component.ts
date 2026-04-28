@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './cta.component.html',
 })
 export class CtaComponent {
-  readonly igUrl = 'https://www.instagram.com/laurafilms__';
+  readonly wspUrl = 'https://wa.me/56952672035';
 }

@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface Plan {
-  tag: string;
   name: string;
   tagline: string;
-  price: string;
-  period: string;
   features: string[];
   featured?: boolean;
 }
@@ -18,37 +15,31 @@ export interface Plan {
   templateUrl: './plans.component.html',
 })
 export class PlansComponent {
-  readonly igUrl = 'https://www.instagram.com/laurafilms__';
+  readonly wspUrl = 'https://wa.me/56952672035';;
 
   readonly plans: Plan[] = [
     {
-      tag: 'Plan Contenido',
-      name: 'BÁSICO',
+      name: 'Plan de Contenido',
       tagline: 'Ideal para empezar tu presencia visual',
-      price: '$250.000',
-      period: '/ mes · valor líquido',
-      features: ['5 fotografías editadas', '2 Reels', '3 horas de grabación'],
+      features: ['Reels', 'Fotografía', '3 horas de grabación'],
     },
     {
-      tag: '⭐ Más popular',
-      name: 'PREMIUM',
-      tagline: 'Más contenido, más impacto',
-      price: '$350.000',
-      period: '/ mes · valor líquido',
-      features: ['10 fotografías editadas', '4 Reels', '3 horas de grabación'],
+      name: 'Plan de Publicidad',
+      tagline: 'Aumenta tus ventas',
+      features: ['4 reels', 'Creatividades ilimitadas', 'Gestión en Meta','Creación y optimización de campañas','Informe mensual'],
       featured: true,
     },
     {
-      tag: 'Plan Publicidad',
-      name: 'ADS',
-      tagline: 'Llega a más clientes con pauta',
-      price: '$590.000',
-      period: '/ mes · valor líquido',
+      name: 'Plan de marketing',
+      tagline: 'Todo lo que tu negocio necesita',
       features: [
-        '4 Reels',
-        'Gráfica / Flyers',
-        'Creación de campañas',
+        'Grilla de contenido',
+        'Manejo de redes sociales',
+        '8 publicaciones',
+        'Historias diarias',
         'Gestión en Meta',
+        'Creación y optimización de campañas',
+        'Informe mensual'
       ],
     },
   ];

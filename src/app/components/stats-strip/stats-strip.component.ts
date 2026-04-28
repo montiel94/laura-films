@@ -9,9 +9,9 @@ import { CommonModule } from '@angular/common';
 })
 export class StatsStripComponent {
   readonly stats = [
-    { number: '1.160', label: 'Conversaciones / mes' },
-    { number: '3×',   label: 'Marcas activas' },
-    { number: '25K+', label: 'Seguidores alcanzados' },
-    { number: '100%', label: 'Resultados transparentes' },
+    { number: '+50', label: 'Clientes' },
+    { number: '+40',   label: 'Matrimonios' },
+    { number: '+20', label: 'Conciertos' },
+    { number: '+8', label: 'Años de experiencia' },
   ];
 }
