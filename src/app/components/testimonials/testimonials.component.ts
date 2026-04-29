@@ -47,7 +47,7 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
   private touchStartX = 0;
 
   ngOnInit() {
-    this.autoTimer = setInterval(() => this.next(), 5000);
+    this.autoTimer = setInterval(() => this.next(), 10000);
   }
 
   ngOnDestroy() {
