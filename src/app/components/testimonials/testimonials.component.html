@@ -1,45 +1,48 @@
 <section class="testimonios-section" id="testimonios">
+  <div class="section-eyebrow">Lo que dicen</div>
   <h2 class="section-title">CLIENTES QUE<br><span class="accent">CONFÍAN</span></h2>
 
-  <div class="test-grid">
-    @for (t of testimonials; track t.name) {
-      <div class="test-card">
-        <div class="test-stars">
-          <span class="test-star">★</span>
-          <span class="test-star">★</span>
-          <span class="test-star">★</span>
-          <span class="test-star">★</span>
-          <span class="test-star">★</span>
-        </div>
-        <p class="test-quote">{{ t.quote }}</p>
-        <div class="test-divider"></div>
-        <div class="test-author">
-          <div class="test-avatar">{{ t.initials }}</div>
-          <div>
-            <div class="test-name">{{ t.name }}</div>
-            <div class="test-role">{{ t.role }}</div>
+  <div class="carousel-wrap"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)">
+    <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+      @for (t of testimonials; track t.name) {
+        <div class="carousel-slide">
+          <div class="test-card">
+            <div class="test-stars">
+              <span class="test-star">★</span>
+              <span class="test-star">★</span>
+              <span class="test-star">★</span>
+              <span class="test-star">★</span>
+              <span class="test-star">★</span>
+            </div>
+            <p class="test-quote">{{ t.quote }}</p>
+            <div class="test-divider"></div>
+            <div class="test-author">
+              <div class="test-avatar">{{ t.initials }}</div>
+              <div>
+                <div class="test-name">{{ t.name }}</div>
+                <div class="test-role">{{ t.role }}</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    }
+      }
+    </div>
   </div>
 
-  <!-- Featured testimonial -->
-  <!--<div class="test-featured">
-    <div class="test-feat-num" aria-hidden="true">❝</div>
-    <div>
-      <div class="test-feat-quote">
-        Trabajar con Laura es tener una
-        <span>aliada estratégica</span>,
-        no solo una proveedora de contenido.
-      </div>
-      <div class="test-feat-author">
-        <div class="test-feat-avatar">FL</div>
-        <div>
-          <div class="test-feat-name">Fusion Luxury</div>
-          <div class="test-feat-role">Marca de fragancias · Santiago</div>
-        </div>
-      </div>
+  <div class="carousel-controls">
+    <button class="carousel-btn" (click)="prev()" aria-label="Anterior">&#8592;</button>
+    <div class="carousel-dots">
+      @for (t of testimonials; track t.name; let i = $index) {
+        <button
+          class="c-dot"
+          [class.active]="i === currentIndex"
+          (click)="goTo(i)"
+          [attr.aria-label]="'Ir al testimonio ' + (i + 1)"
+        ></button>
+      }
     </div>
-  </div>-->
+    <button class="carousel-btn" (click)="next()" aria-label="Siguiente">&#8594;</button>
+  </div>
 </section>
